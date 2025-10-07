@@ -6,13 +6,15 @@ import { App } from './app';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Header } from './components/header/header';
 import { CarComponent } from './components/car/car';
+import { Cars } from './components/cars/cars';
 
 
 @NgModule({
   declarations: [
     App,
     Header,
-    CarComponent
+    CarComponent,
+    Cars
 
   ],
   imports: [
