@@ -10,6 +10,9 @@ import { Car } from '../../car.model'
 })
 export class Cars {
   isUpdate: boolean = false;
+  idCount: number = 3;
+
+
   car: Car = {} as Car;
   cars: Car[] = [
     {
@@ -32,7 +35,8 @@ export class Cars {
   saveCar() {
 
     if (!this.isUpdate) {
-      this.car.id = this.cars.length + 1;
+      this.car.id = this.idCount;
+      this.idCount++;
       this.cars.push(this.car);
     }
 
