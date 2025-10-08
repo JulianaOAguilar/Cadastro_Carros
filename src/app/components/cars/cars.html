@@ -1,7 +1,7 @@
-<div class="container">
-    <hr>
+<div class="container bg-light p-3">
+    <app-car [car]="car"></app-car>
     <h3>Carros Cadastrados: </h3>
-    <table class="table">
+    <table class="table table-light">
         <thead>
             <tr>
                 <th>#</th>
@@ -12,12 +12,12 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let car of cars">
-                <td>{{car.id}}</td>
-                <td>{{car.name}}</td>
-                <td>{{car.assembler}}</td>
-                <td>{{car.price}}</td>
-                <td>{{car.year}}</td>
+            <tr *ngFor="let c of cars">
+                <td>{{c.id}}</td>
+                <td>{{c.name}}</td>
+                <td>{{c.assembler}}</td>
+                <td>{{c.price}}</td>
+                <td>{{c.year}}</td>
             </tr>
         </tbody>
     </table>

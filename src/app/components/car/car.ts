@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Car} from '../../car.model'
+import { Component, Input } from '@angular/core';
+import { Car } from '../../car.model'
 
 
 @Component({
@@ -9,11 +9,9 @@ import { Car} from '../../car.model'
   styleUrl: './car.css'
 })
 export class CarComponent {
-  car: Car = {
-    id: 1,
-    name: 'Fusca',
-    assembler: 'Tadeu',
-    price: 5000.50,
-    year: 1860
-  }
+  
+  @Input()
+   car: Car = {} as Car;
+  
+
 }

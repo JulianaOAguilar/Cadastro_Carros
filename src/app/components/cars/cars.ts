@@ -9,10 +9,12 @@ import { Car} from '../../car.model'
   styleUrl: './cars.css'
 })
 export class Cars {
+
+  car: Car = {name: 'teste'} as Car;
 cars: Car[] = [
   {
     id: 1,
-    name: 'Fusca',
+    name: 'Fusa',
     assembler: 'Tadeu',
     price: 5000.50,
     year: 1860
