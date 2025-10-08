@@ -8,6 +8,7 @@ import { Header } from './components/header/header';
 import { CarComponent } from './components/car/car';
 import { Cars } from './components/cars/cars';
 import { FormsModule } from '@angular/forms';
+import { Footer } from './components/footer/footer';
 
 
 
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     App,
     Header,
     CarComponent,
-    Cars
+    Cars,
+    Footer
 
   ],
   imports: [
