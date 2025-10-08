@@ -9,18 +9,19 @@
                 <th>Montadora</th>
                 <th>Preço</th>
                 <th>Ano</th>
-                <th class="text-end"> Opções </th>
+                <th class="text-end">Opções</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let c of cars">
-                <td>{{c.id}}</td>
-                <td>{{c.name}}</td>
-                <td>{{c.assembler}}</td>
-                <td>{{c.price}}</td>
-                <td>{{c.year}}</td>
-                <td>
-                    <button class="btn btn-success" (click)="update(c)"> Alterar</button>
+                <td>{{ c.id }}</td>
+                <td>{{ c.name }}</td>
+                <td>{{ c.assembler }}</td>
+                <td>{{ c.price }}</td>
+                <td>{{ c.year }}</td>
+                <td class="text-end">
+                    <button class="btn btn-success me-2" (click)="update(c)">Alterar</button>
+                    <button class="btn btn-danger" (click)="remove(c)">Remover</button>
                 </td>
             </tr>
         </tbody>
