@@ -9,6 +9,7 @@
                 <th>Montadora</th>
                 <th>Preço</th>
                 <th>Ano</th>
+                <th class="text-end"> Opções </th>
             </tr>
         </thead>
         <tbody>
@@ -18,6 +19,9 @@
                 <td>{{c.assembler}}</td>
                 <td>{{c.price}}</td>
                 <td>{{c.year}}</td>
+                <td>
+                    <button class="btn btn-success" (click)="update(c)"> Alterar</button>
+                </td>
             </tr>
         </tbody>
     </table>

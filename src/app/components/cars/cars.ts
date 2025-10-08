@@ -9,12 +9,12 @@ import { Car} from '../../car.model'
   styleUrl: './cars.css'
 })
 export class Cars {
-
-  car: Car = {name: 'teste'} as Car;
+isUpdate: boolean = false;
+car: Car = {} as Car;
 cars: Car[] = [
   {
     id: 1,
-    name: 'Fusa',
+    name: 'Fusca',
     assembler: 'Tadeu',
     price: 5000.50,
     year: 1860
@@ -30,8 +30,21 @@ cars: Car[] = [
 ]
 
   saveCar() {
-    this.car.id = this.cars.length + 1;
-    this.cars.push(this.car);
+
+    if(!this.isUpdate)
+    {
+      this.car.id = this.cars.length + 1;
+      this.cars.push(this.car);
+    }
+    
     this.car = {} as Car;
+    this.isUpdate = false;
   }
+
+  
+update(selectedCar: Car) {
+this.car = selectedCar;
+this.isUpdate = true;
 }
+}
+
