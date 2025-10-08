@@ -1,5 +1,5 @@
 <div class="container bg-light p-3">
-    <app-car [car]="car"></app-car>
+    <app-car [car]="car" (saveEmitter)="saveCar()"></app-car>
     <h3>Carros Cadastrados: </h3>
     <table class="table table-light">
         <thead>
