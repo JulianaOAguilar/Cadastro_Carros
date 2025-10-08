@@ -19,7 +19,24 @@ export class CarComponent {
 
 
    save(){
+
+    if (this.car.year < 0)
+    {
+      alert("Impossivel cadastrar ano negativo!");
+      return;
+    }
+
+    if (this.car.price < 0)
+    {
+      alert("Impossivel cadastrar preço negativo!");
+      return;
+    }
+
+    
     this.saveEmitter.emit();
+
+
+
    }
   
 
